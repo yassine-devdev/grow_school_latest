@@ -1,0 +1,164 @@
+/* Video Editor UI Improvements */
+
+/* Smooth transitions for all interactive elements */
+.video-editor * {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Improved scrollbar styling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Enhanced focus states */
+.video-editor button:focus-visible,
+.video-editor input:focus-visible,
+.video-editor select:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Improved hover states for timeline items */
+.timeline-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Better visual hierarchy for selected items */
+.timeline-item.selected {
+  z-index: 50;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+}
+
+/* Smoother animations for drag operations */
+.timeline-item.dragging {
+  transform: rotate(2deg) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced grid background */
+.video-container {
+  background-image: 
+    linear-gradient(to right, rgba(128, 128, 128, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .video-container {
+    background-image: 
+      linear-gradient(to right, rgba(128, 128, 128, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(128, 128, 128, 0.03) 1px, transparent 1px);
+  }
+}
+
+/* Improved button spacing and sizing */
+.timeline-controls button {
+  min-height: 36px;
+  min-width: 36px;
+  padding: 8px;
+}
+
+/* Better visual feedback for loading states */
+.loading-indicator {
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .loading-indicator {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Enhanced timeline row styling */
+.timeline-row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  min-height: 56px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .timeline-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Sidebar improvements */
+.sidebar-content {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+@media (prefers-color-scheme: dark) {
+  .sidebar-content {
+    background: rgba(0, 0, 0, 0.95);
+  }
+}
+
+/* Animation panel improvements */
+.animation-section {
+  z-index: 100;
+  position: relative;
+}
+
+.animation-section .collapsible-content {
+  z-index: 110;
+  position: relative;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .animation-section .collapsible-content {
+    background: rgba(0, 0, 0, 0.98);
+  }
+}
+
+/* Prevent content overlap */
+.sidebar-inset {
+  margin-left: 0;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+/* Ensure proper layering */
+.video-editor-sidebar {
+  z-index: 50;
+  position: fixed;
+  backdrop-filter: blur(12px);
+}
+
+.video-editor-content {
+  z-index: 10;
+  position: relative;
+}
+
+/* Improved spacing for mobile devices */
+@media (max-width: 768px) {
+  .timeline-controls {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  
+  .timeline-item {
+    min-height: 48px;
+  }
+}
+
+/* Better visual separation */
+.editor-section {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .editor-section {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}

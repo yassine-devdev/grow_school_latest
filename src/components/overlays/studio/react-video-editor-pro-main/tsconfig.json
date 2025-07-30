@@ -1,0 +1,26 @@
+{
+  "extends": "../../../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "types": ["node", "react", "react-dom"],
+    "paths": {
+      "@/*": ["./"],
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/utils/*": ["./components/editor/version-7.0.0/utils/*"],
+      "@/types/*": ["./components/editor/version-7.0.0/types/*"],
+      "@/contexts/*": ["./components/editor/version-7.0.0/contexts/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "coverage"
+  ]
+}

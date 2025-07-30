@@ -1,0 +1,443 @@
+/* Lifestyle Overlay Styles */
+.lifestyle-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 85vh;
+  max-width: 1200px;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.lifestyle-overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.lifestyle-overlay-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lifestyle-overlay-icon {
+  color: #10b981;
+}
+
+.lifestyle-overlay-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.lifestyle-overlay-header-right {
+  display: flex;
+  gap: 8px;
+}
+
+.lifestyle-overlay-btn {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lifestyle-overlay-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lifestyle-overlay-btn-close:hover {
+  background: rgba(239, 68, 68, 0.8);
+}
+
+.lifestyle-overlay-content {
+  flex: 1;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.lifestyle-search-container {
+  position: relative;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.lifestyle-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.lifestyle-search-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.lifestyle-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.lifestyle-search-input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.lifestyle-main {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.lifestyle-categories {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.lifestyle-categories h3 {
+  color: white;
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.lifestyle-category-btn {
+  width: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.lifestyle-category-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.lifestyle-category-btn.active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+}
+
+.category-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.category-description {
+  font-size: 12px;
+  color: #9ca3af;
+  line-height: 1.3;
+}
+
+.lifestyle-activities {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.lifestyle-activities-header {
+  margin-bottom: 20px;
+}
+
+.lifestyle-activities-header h2 {
+  color: white;
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.lifestyle-activities-header p {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 14px;
+}
+
+.lifestyle-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.lifestyle-activity-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.lifestyle-activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.lifestyle-activity-image {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.lifestyle-activity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.lifestyle-activity-card:hover .lifestyle-activity-image img {
+  transform: scale(1.05);
+}
+
+.lifestyle-activity-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lifestyle-activity-card:hover .lifestyle-activity-overlay {
+  opacity: 1;
+}
+
+.lifestyle-start-btn {
+  padding: 10px 20px;
+  background: #10b981;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lifestyle-start-btn:hover {
+  background: #059669;
+  transform: scale(1.05);
+}
+
+.lifestyle-activity-content {
+  padding: 16px;
+}
+
+.lifestyle-activity-content h3 {
+  color: white;
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.lifestyle-activity-content p {
+  color: #d1d5db;
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.lifestyle-activity-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.difficulty {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.difficulty.easy {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.difficulty.medium {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+.difficulty.hard {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.duration {
+  padding: 4px 8px;
+  background: rgba(99, 102, 241, 0.2);
+  color: #6366f1;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.lifestyle-activity-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #9ca3af;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.lifestyle-empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.lifestyle-empty-state svg {
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+/* Activity Modal */
+.lifestyle-activity-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.lifestyle-activity-modal-content {
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  width: 90vw;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.lifestyle-activity-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lifestyle-activity-modal-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+}
+
+.lifestyle-activity-modal-header button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.lifestyle-activity-modal-header button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lifestyle-activity-modal-body {
+  padding: 20px;
+}
+
+.lifestyle-activity-modal-body img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-content p {
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.modal-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.modal-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.lifestyle-close-modal-btn {
+  padding: 10px 20px;
+  background: #10b981;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.lifestyle-close-modal-btn:hover {
+  background: #059669;
+}

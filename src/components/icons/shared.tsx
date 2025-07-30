@@ -1,0 +1,232 @@
+
+import * as L from './lucide';
+
+export const sharedIcons = {
+  // Main modules
+  Dashboard: L.LayoutDashboard,
+  Analytics: L.BarChart2,
+  School: L.School,
+  Communications: L.Mail,
+  KnowledgeBase: L.BookOpen,
+  ConciergeAI: L.Bot,
+  Marketplace: L.Store,
+  SystemSettings: L.Settings,
+  
+  // Authentication
+  Lock: L.Lock,
+  Eye: L.Eye,
+  EyeOff: L.EyeOff,
+  LogIn: L.LogIn,
+  Github: L.Github,
+
+  // UI
+  ToggleSidebar: L.PanelLeft,
+  ToggleSidebarRight: L.PanelRight,
+  Search: L.Search,
+  Close: L.X,
+  Time: L.Clock,
+  
+  // Overlays / Dock
+  News: L.Newspaper,
+  Chat: L.MessageSquare,
+  Cloud: L.Cloud,
+  Canva: L.Palette,
+  Coder: L.Code2,
+  Office: L.FileText,
+  Video: L.Clapperboard,
+  Gamification: L.Gamepad2,
+  Lifestyle: L.HeartPulse,
+  Hobbies: L.Bike,
+  Media: L.Music,
+  Tv: L.Tv,
+  Studio: L.Camera,
+  
+  // Common icons
+  ChevronRight: L.ChevronRight,
+  ChevronLeft: L.ChevronLeft,
+  ChevronDown: L.ChevronRight, // Using ChevronRight as substitute
+  Star: L.Star,
+  Apple: L.Heart, // Using Heart as substitute for Apple
+  Target: L.Target,
+  Users: L.Users,
+  User: L.User,
+  Security: L.Shield,
+  Briefcase: L.Briefcase,
+  Students: L.GraduationCap,
+  Administration: L.Users,
+  Curriculum: L.BookCopy,
+  Library: L.Library,
+  SystemPrompts: L.Lightbulb,
+  UsageAnalytics: L.Cpu,
+  Storefront: L.ShoppingBag,
+  Orders: L.Truck,
+  Send: L.SendHorizontal,
+  ClipboardCheck: L.ClipboardCheck,
+  Goal: L.Goal,
+  
+  // Analytics Module aliases
+  Branding: L.BrandingIcon,
+  Overview: L.BarChartHorizontal,
+  Finance: L.DollarSign,
+  Marketing: L.TrendingUp,
+  
+  // Other generic re-exports from original file
+  Activity: L.Activity,
+  Megaphone: L.Megaphone,
+  Wand2: L.Wand2,
+  PenSquare: L.PenSquare,
+  Siren: L.Siren,
+  BrainCircuit: L.BrainCircuit,
+  TrendingUp: L.TrendingUp,
+  BookOpen: L.BookOpen,
+  ScanLine: L.ScanLine,
+  Lightbulb: L.Lightbulb,
+  Image: L.Image,
+  Upload: L.Upload,
+  Save: L.Save,
+  UserPlus: L.UserPlus,
+  View: L.View,
+  Trash2: L.Trash2,
+  Smartphone: L.Smartphone,
+  PlusCircle: L.PlusCircle,
+  Plus: L.Plus,
+  Edit: L.Edit,
+  MoreVertical: L.MoreVertical,
+  Check: L.Check,
+  Download: L.Download,
+  PlayCircle: L.PlayCircle,
+  TrendingDown: L.TrendingDown,
+  CheckCircle: L.CheckCircle,
+  MousePointer2: L.MousePointer2,
+  Type: L.TypeIcon,
+  StickyNote: L.StickyNote,
+  Undo: L.Undo,
+  Redo: L.Redo,
+  Facebook: L.Facebook,
+  Twitter: L.Twitter,
+  Award: L.Award,
+  Shield: L.Shield,
+  Cpu: L.Cpu,
+  GraduationCap: L.GraduationCap,
+  Heart: L.Heart,
+  Sparkles: L.Sparkles,
+  Smile: L.Smile,
+
+  // New Icons for enhancements
+  Pin: L.Pin,
+  PinOff: L.PinOff,
+  AlertTriangle: L.AlertTriangle,
+  CalendarDays: L.CalendarDays,
+  Book: L.BookCopy,
+  History: L.History,
+  Revert: L.Undo2,
+  Home: L.Home,
+  Printer: L.Printer,
+  MapPin: L.MapPin,
+  Instagram: L.Instagram,
+  Bell: L.Bell,
+  Languages: L.Languages,
+
+  // Window management
+  Minimize: L.Minus,
+
+  // Icons for Studio
+  Design: L.Palette,
+  VideoL1: L.VideoIcon,
+  CoderL1: L.Code2,
+  OfficeL1: L.FileText,
+  Word: L.FileIcon,
+  Excel: L.Sheet,
+  PowerPoint: L.PresentationIcon,
+  Diagram: L.Share2,
+  Bold: L.Bold,
+  Italic: L.Italic,
+  Underline: L.Underline,
+  AlignLeft: L.AlignLeft,
+  AlignCenter: L.AlignCenter,
+  AlignRight: L.AlignRight,
+  Rectangle: L.RectangleHorizontal,
+  Circle: L.Circle,
+  Diamond: L.Diamond,
+  ArrowRight: L.ArrowRight,
+
+  // Icons for Settings
+  Puzzle: L.Puzzle,
+  CreditCard: L.CreditCard,
+  Globe: L.Globe,
+  UserCog: L.UserCog,
+  Wallet: L.Wallet,
+  KeyRound: L.KeyRound,
+  Webhook: L.Webhook,
+  BookLock: L.BookLock,
+
+  // Icons for Knowledge Base
+  Calculator: L.Calculator,
+  FlaskConical: L.FlaskConical,
+  Filter: L.Filter,
+  Bookmark: L.Bookmark,
+  Computer: L.Computer,
+  
+  // Icons for Marketplace
+  ShoppingCart: L.ShoppingCart,
+  Ticket: L.Ticket,
+  Events: L.Ticket, // Alias
+  Services: L.Briefcase,
+  Package: L.Package,
+  Deals: L.Tag,
+  Apparel: L.Shirt,
+  Books: L.BookCopy,
+  Tech: L.Laptop,
+  GiftShop: L.Heart,
+  MyOrders: L.List,
+  MyListings: L.Tag,
+  PaymentSettings: L.Wallet,
+  MinusCircle: L.MinusCircle,
+  Tablet: L.Tablet,
+  Laptop: L.Laptop,
+
+  // Icons for Hobbies
+  Creative: L.Paintbrush,
+  Sports: L.Bike,
+  Gaming: L.Gamepad2,
+  Collecting: L.Package,
+  Outdoors: L.Mountain,
+  ArtGallery: L.Image,
+  MusicStudio: L.Music,
+  WritingDesk: L.PenSquare,
+  ActivityLog: L.Activity,
+  GoalTracker: L.Goal,
+  TeamHub: L.Users,
+  GameLibrary: L.Library,
+  SessionLogger: L.History,
+  BoardGameNights: L.CalendarDays,
+  CollectionManager: L.Database,
+  Wishlist: L.Heart,
+  TrailFinder: L.MapPin,
+  GardenPlanner: L.Leaf,
+
+  // Add direct access to icons to fix errors
+  Store: L.Store,
+  Settings: L.Settings,
+  FileText: L.FileText,
+  Music: L.Music,
+  BookCopy: L.BookCopy,
+  PieChart: L.PieChart,
+  BarChart: L.BarChart,
+  BarChart2: L.BarChart2,
+  BarChart3: L.BarChart3,
+  List: L.List,
+  LogOut: L.LogOut,
+  Map: L.Map,
+  Crosshair: L.Crosshair,
+  
+  // Missing icons that are causing errors
+  ArrowLeft: L.ChevronLeft, // Using ChevronLeft as substitute
+  XCircle: L.X, // Using X as substitute
+  Info: L.AlertTriangle, // Using AlertTriangle as substitute
+  
+  // Additional missing icons for toast functionality
+  X: L.X,
+  CheckCircle: L.CheckCircle,
+  AlertTriangle: L.AlertTriangle
+};
