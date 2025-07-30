@@ -174,8 +174,7 @@ export const VideoEditorUtils = {
   },
 };
 
-// Re-export configuration for convenience
-export { SUPPORTED_FORMATS, EXPORT_PRESETS, FEATURE_FLAGS, ERROR_CODES } from './config';
+// Configuration is already exported above, no need to re-export
 
 // Default export for easy importing
 export default {
